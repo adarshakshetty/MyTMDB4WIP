@@ -1,0 +1,46 @@
+package com.wipro.movie.extensions
+
+import com.android.build.api.dsl.CommonExtension
+import com.wipro.movie.AndroidConfig
+import org.gradle.api.JavaVersion
+import org.gradle.api.plugins.ExtensionAware
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+
+internal fun configureKotlinAndroid(
+    commonExtension: CommonExtension<*, *, *, *, *>,
+    optInCoroutines: Boolean = true,
+) {
+    commonExtension.apply {
+        compileSdk = AndroidConfig.COMPILE_SDK
+
+        defaultConfig {
+            minSdk = AndroidConfig.MIN_SDK
+            testInstrumentationRunner = AndroidConfig.TEST_INSTRUMENTATION_RUNNER
+        }
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
+        }
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_17.toString()
+
+            // Treat all Kotlin warnings as errors (disabled by default)
+            allWarningsAsErrors = true
+
+            freeCompilerArgs = freeCompilerArgs + listOfNotNull(
+                "-opt-in=kotlin.RequiresOptIn",
+                "-Xcontext-receivers",
+                // Enable experimental coroutines APIs, including Flow
+                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi".takeIf { optInCoroutines },
+                "-opt-in=kotlinx.coroutines.FlowPreview".takeIf { optInCoroutines },
+            )
+        }
+        buildFeatures {
+            viewBinding = true
+        }
+    }
+}
+
+internal fun CommonExtension<*, *, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) {
+    (this as ExtensionAware).extensions.configure("kotlinOptions", block)
+}

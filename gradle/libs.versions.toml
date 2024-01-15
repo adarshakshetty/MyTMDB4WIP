@@ -1,0 +1,152 @@
+[versions]
+coreKtx = "1.12.0"
+appCompat = "1.6.1"
+constraintlayout = "2.1.4"
+material = "1.11.0"
+splashScreen = "1.0.1"
+hilt = "2.48.1"
+coroutines = "1.7.3"
+timber = "5.0.1"
+fragmentKtx = "1.6.2"
+viewModelKtx = "2.7.0"
+navigation = "2.7.6"
+lifecycle = "2.7.0"
+kotlinxSerializationJson = "1.6.0"
+lottie = "6.1.0"
+retrofit = "2.9.0"
+loggingInterceptor = "4.12.0"
+kotlinxSerializationConverterVersion = "1.0.0"
+room = "2.6.1"
+paging = "3.2.1"
+glide = "4.16.0"
+swiperefreshlayout = "1.1.0"
+chucker = "4.0.0"
+profileInstaller = "1.3.1"
+recyclerview = "1.3.2"
+cardview = "1.0.0"
+
+# Tests
+junit = "4.13.2"
+junitAndroid = "1.1.5"
+espresso = "3.5.1"
+uiautomator = "2.2.0"
+turbine = "1.0.0"
+archCore = "2.2.0"
+mockk = "1.13.8"
+roboelectric = "4.11.1"
+
+# Dependency versions of the included build-logic
+androidGradlePlugin = "8.1.4"
+kotlin = "1.9.20"
+detekt = "1.23.3"
+javapoet = "1.13.0"
+navigationSafeargs = "2.7.6"
+kspGradlePlugin = "1.9.20-1.0.14"
+
+# Plugins
+ktlintPlugin = "11.6.1"
+versionsPlugin = "0.49.0"
+hiltPlugin = "2.48.1"
+kover = "0.7.4"
+moduleGraphAssertion = "2.5.0"
+
+[libraries]
+# Androidx
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-splash-screen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashScreen" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewModelKtx" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-saved-state = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+androidx-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
+androidx-paging = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "profileInstaller" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+
+# Google
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Dependency injection
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+
+# Logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Kotlin
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+# Animation
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+
+# Network
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "kotlinxSerializationConverterVersion" }
+chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
+
+# Image loading
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+
+# Detekt plugins
+detekt-formating = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+detekt-rules = { group = "io.gitlab.arturbosch.detekt", name = "detekt-rules", version.ref = "detekt" }
+
+# Test dependencies
+junit-test = { group = "junit", name = "junit", version.ref = "junit" }
+hilt-test = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+room-test = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+paging-common-test = { group = "androidx.paging", name = "paging-common", version.ref = "paging" }
+paging-test = { group = "androidx.paging", name = "paging-testing", version.ref = "paging" }
+turbine-test = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+arch-core-test = { group = "androidx.arch.core", name = "core-testing", version.ref = "archCore" }
+mockkAndroid-test = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+mockkAgent-test = { group = "io.mockk", name = "mockk-agent", version.ref = "mockk" }
+roboelectric-test = { group = "org.robolectric", name = "robolectric", version.ref = "roboelectric" }
+
+
+# Test Android dependencies
+junit-androidTest = { group = "androidx.test.ext", name = "junit", version.ref = "junitAndroid" }
+espesso-androidTest = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+hilt-androidTest = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+uiautomator-androidTest = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+
+# Annotation processor dependencies
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+# Dependencies of the included build-logic
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+detekt-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+javapoet-plugin = { module = "com.squareup:javapoet", version.ref = "javapoet" }
+navigation-safeargs-plugin = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigationSafeargs" }
+ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "kspGradlePlugin" }
+kotlinx-kover-plugin = { group = "org.jetbrains.kotlinx", name = "kover-gradle-plugin", version.ref = "kover" }
+
+[bundles]
+androidx-navigation = ["androidx.navigation.fragment", "androidx.navigation.ui"]
+androidx-lifecycle = ["androidx.lifecycle", "androidx.lifecycle.viewmodel", "androidx.lifecycle.viewmodel.saved.state"]
+androidx-room = ["androidx.room", "androidx.room.ktx", "androidx.room.paging"]
+detekt = ["detekt.formating", "detekt.rules"]
+
+[plugins]
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintPlugin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versionsPlugin" }
+hilt = { id = "dagger.hilt.android.plugin", version.ref = "hiltPlugin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspGradlePlugin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+module-graph-assertion = { id = "com.jraska.module.graph.assertion", version.ref = "moduleGraphAssertion" }
